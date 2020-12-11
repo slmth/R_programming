@@ -4,3 +4,4 @@ R Programlamaya Giriş Kodları. Tüm belgeler yorum satırlarıyla açıklama i
 If you're a new learner,you can use this repository's codes. But all comment lines language is Turkish. 
 
 #### Less 1 - Değer atama,ekrana yazdırma,operatörler (işlemsel ve mantıksal) 
+#### Less 2 - Veri Tipleri 1 (Vektörler ve Matrisler)
