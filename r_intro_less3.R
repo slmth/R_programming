@@ -5,7 +5,7 @@
 
 #VERİ TİPLERİ VE KULLANIMI 3
 
-#Dataframeler
+#DataFrameler
 
 data_f <- data.frame(
   urun=c("kalem","canta","kitap","silgi"),
