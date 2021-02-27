@@ -1,9 +1,9 @@
 #Introduction to R Programming - Less3
 
-#(Notlar ve kodlar tarafýmdan yazilmakta ayni zamanda kaynak olarak Mustafa Vahit Keskin
-#Hoca'nýn Udemy kursundaki anlatimi ve farkli kaynaklar kullanilmaktadir)
+#(Notlar ve kodlar tarafÄ±mdan yazilmakta ayni zamanda kaynak olarak Mustafa Vahit Keskin
+#Hoca'nÄ±n Udemy kursundaki anlatimi ve farkli kaynaklar kullanilmaktadir)
 
-#VERÝ TÝPLERÝ VE KULLANIMI 13
+#VERÄ° TÄ°PLERÄ° VE KULLANIMI 3
 
 #Dataframeler
 
@@ -13,38 +13,38 @@ data_f <- data.frame(
   stok_adet=c(1200,15,250,1500)
 )
 
-summary(df) #df deki minimumu,1.çeyrek bilgisini,medyaný,ortalamayý vb.bulmyý saðlar
+summary(df) #df deki minimumu,1.Ã§eyrek bilgisini,medyanÄ±,ortalamayÄ± vb.bulmyÄ± saÄŸlar
 
-ncol(df)  #sutun sayýsýný verir
+ncol(df)  #sutun sayÄ±sÄ±nÄ± verir
 
-nrow(df) #satýr sayýsýný verir
+nrow(df) #satÄ±r sayÄ±sÄ±nÄ± verir
 
 dim(df) #boyut verir
 
 data_f_yeni <- data.frame (data_f$urun,data_f$fiyat)
-#bir önceki dfden urun ve fiyat degiskenlerini alarak
-#yeni bir df icine aktarýr
+#bir Ã¶nceki dfden urun ve fiyat degiskenlerini alarak
+#yeni bir df icine aktarÄ±r
 
 data_f[1:2,]
-#data_f'nin 1 ve 2.sütununun tüm satýrlarýný yazdýrýr
+#data_f'nin 1 ve 2.sÃ¼tununun tÃ¼m satÄ±rlarÄ±nÄ± yazdÄ±rÄ±r
 
 data_f[c(1,2),c(2,3)]
-#data_f'nin 1,2. satýr ve 2,3. sütunlarýný yazdýrýr
+#data_f'nin 1,2. satÄ±r ve 2,3. sÃ¼tunlarÄ±nÄ± yazdÄ±rÄ±r
 
-data_f$satýs <- c(100,10,8,250)
+data_f$satÄ±s <- c(100,10,8,250)
 sutun_ekle <- data_f
-#data_f'ye satýs sütununu ekler
+#data_f'ye satÄ±s sÃ¼tununu ekler
 
 #Listeler
 
-#birden fazla farklý tipi içinde barýndýrabilen ve ayný zamanda
-#deðiþikliðe uðrayabilen yapýlardýr.
+#birden fazla farklÄ± tipi iÃ§inde barÄ±ndÄ±rabilen ve aynÄ± zamanda
+#deÄŸiÅŸikliÄŸe uÄŸrayabilen yapÄ±lardÄ±r.
 
 liste <- list (TRUE,c(41,85,46),"hs",1387) 
-#list() fonksiyonu aracýlýðýyla oluþturulurlar
+#list() fonksiyonu aracÄ±lÄ±ÄŸÄ±yla oluÅŸturulurlar
 
 names(liste) <- c("boolean","vektorel","string","integer")
-#names ifadesiyle listedeki her deðer bir isim alabilir yani 
+#names ifadesiyle listedeki her deÄŸer bir isim alabilir yani 
 #bir listenin indexinin degeri yerine bir string ifade koyabiliriz
 
 liste$boolean
@@ -52,19 +52,19 @@ liste$vektorel
 liste$string
 liste$integer
 
-#bu sayede indexi sayýsal degerle çaðýrmak yerine string ifadeyle çagýrabiliriz
+#bu sayede indexi sayÄ±sal degerle Ã§aÄŸÄ±rmak yerine string ifadeyle Ã§agÄ±rabiliriz
 
 liste[1] 
 liste[2]
 liste[3]
 liste[4]
 
-#liste[1] ile yapýlan çaðýrma iþlemi bize o deðerin hem ismini hem de sahip olduðu girdiyi verir
+#liste[1] ile yapÄ±lan Ã§aÄŸÄ±rma iÅŸlemi bize o deÄŸerin hem ismini hem de sahip olduÄŸu girdiyi verir
 
-#liste[1] için
+#liste[1] iÃ§in
 
 #$boolean
-#[1] TRUE gibi bir çýktý alýrýz.
+#[1] TRUE gibi bir Ã§Ä±ktÄ± alÄ±rÄ±z.
 
 isimsiz_liste <- list (TRUE,c(41,85,46),"hs",1387) 
 
@@ -73,22 +73,22 @@ isimsiz_liste[2]
 isimsiz_liste[3]
 isimsiz_liste[4]
 
-#isimsiz listedeki çaðýrýlma iþleminde deminki listenin isim yerinde
-#sadece index deðer gözükür ve o indexin sahip olduðu girdi ekrana yazdýrýlýr
+#isimsiz listedeki Ã§aÄŸÄ±rÄ±lma iÅŸleminde deminki listenin isim yerinde
+#sadece index deÄŸer gÃ¶zÃ¼kÃ¼r ve o indexin sahip olduÄŸu girdi ekrana yazdÄ±rÄ±lÄ±r
 
-#isimsiz_liste[4] için
+#isimsiz_liste[4] iÃ§in
 
 #[[1]]
-#[1] 1387 gibi bir çýktý alýrýz
+#[1] 1387 gibi bir Ã§Ä±ktÄ± alÄ±rÄ±z
 
 liste_birlestir <- c(liste,isimsiz_liste)
-#c aracýlýgý ile iki listeyi tek liste haline getirebiliriz
-#tek liste 8 eleman içerir þeklinde gözükür 
-#her eleman hangi veri tipine sahipse o þekilde tek bir
-#liste içinde yer alýr
+#c aracÄ±lÄ±gÄ± ile iki listeyi tek liste haline getirebiliriz
+#tek liste 8 eleman iÃ§erir ÅŸeklinde gÃ¶zÃ¼kÃ¼r 
+#her eleman hangi veri tipine sahipse o ÅŸekilde tek bir
+#liste iÃ§inde yer alÄ±r
 
 liste_birlestir_2 <- list(liste,isimsiz_liste)
-#list ifadesi ile de iki listeyi birleþtirip ayný çýktýyý alýrýz
-#fakat listenin eleman sayýsý 2 olarak gözükür ve 2 adet liste içerdiði gözükür
-#yani uzunluk olarak c yönteminden farklý bir uzunlukta gözükür ve
-#içerik olarak 2 tip liste barýndýrdýðý algýlanýrs
+#list ifadesi ile de iki listeyi birleÅŸtirip aynÄ± Ã§Ä±ktÄ±yÄ± alÄ±rÄ±z
+#fakat listenin eleman sayÄ±sÄ± 2 olarak gÃ¶zÃ¼kÃ¼r ve 2 adet liste iÃ§erdiÄŸi gÃ¶zÃ¼kÃ¼r
+#yani uzunluk olarak c yÃ¶nteminden farklÄ± bir uzunlukta gÃ¶zÃ¼kÃ¼r ve
+#iÃ§erik olarak 2 tip liste barÄ±ndÄ±rdÄ±ÄŸÄ± algÄ±lanÄ±rs
